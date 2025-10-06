@@ -20,6 +20,8 @@ int menu() {
     std::cout << "Restar: 2\n";
     std::cout << "Dividir: 3\n";
     std::cout << "Multiplicar: 4\n";
+    std::cout << "Division entera: 5\n";
+    std::cout << "Potencia: 6\n";
     std::cout << "Salir: 0\n";
     std::cout << "======================\n";
     return 0;
@@ -89,12 +91,53 @@ int dividir() {
     return 0;
 }
 
+int potencia() {
+    double Num1;
+    double Num2;
+    double resultado = 1;
+    
+    std::cout << "Num1: ";
+    std::cin >> Num1;
+    std::cout << "\nNum2: ";
+    std::cin >> Num2;
+    
+    for (int i = 1; i <= Num2; i++) {
+        resultado = resultado * Num1;
+    }
+
+    std::cout << "El resultado es: " << resultado << "\n" << std::endl;
+
+    return 0;
+}
+
+int div_entera() {
+    double Num1;
+    double Num2;
+    int resultado;
+    double resto;
+
+    std::cout << "Num1: ";
+    std::cin >> Num1;
+    std::cout << "\nNum2: ";
+    std::cin >> Num2;
+
+    if (Num2 == 0) {
+        std::cout << "\nError: No puede dividirse por cero\n";
+        return 0;
+    }
+
+    resultado = Num1 / Num2;
+    std::cout << "El resultado es: " << resultado << "\n" << std::endl;
+    resto = Num1 - Num2 * resultado;
+    std::cout << "El resto es: " << resto << "\n" << std::endl;
+    return 0;
+}
+
 int main()
 {
     int opcion;
-    std::cout << "Calculadora V1: Operaciones Basicas\n";
-    std::cout << "Esta version permite sumar, restar, multiplicar y dividir\n";
-    std::cout << "Unicamente es capaz de gestionar errores del tipo /0 y no entrada de datos como str\n";
+    std::cout << "Calculadora V2: Potencias y divisiones enteras\n";
+    std::cout << "Incorporamos dos opciones de operaciones, sin mejoras en gestion de errores\n";
     _getch();
     system("cls");
 
@@ -111,10 +154,18 @@ int main()
             resta();
         }
         else if (opcion == 3) {
-            multiplicar();
+
+            dividir();
+            
         }
         else if (opcion == 4) {
-            dividir();
+            multiplicar();
+        }
+        else if (opcion == 5) {
+            div_entera();
+        }
+        else if (opcion == 6) {
+            potencia();
         }
         else if (opcion == 0) {
             std::cout << "Saliendo...";
