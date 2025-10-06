@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Calculadora-V1.cpp" />
+    <ClCompile Include="Principal.cpp" />
+    <ClCompile Include="Funciones.cpp" />
+    <ClCompile Include="Interfaces.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Funciones.h" />
+    <ClInclude Include="Interfaces.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
