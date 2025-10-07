@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Calculadora.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="Interfaces.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Calculadora.h" />
     <ClInclude Include="Funciones.h" />
     <ClInclude Include="Interfaces.h" />
   </ItemGroup>

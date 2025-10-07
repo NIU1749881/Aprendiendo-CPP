@@ -4,52 +4,34 @@
 #include <conio.h>
 #include <cstdlib>
 
-#include "Interfaces.h"
-#include "Funciones.h"
+#include "Calculadora.h"
 
+int menu() {
+    std::cout << "Seleccione uno de los siguientes programas por favor:\n";
+    std::cout << "======================\n";
+    std::cout << "Calculadora: 1\n";
+    std::cout << "Salir: 0\n";
+    std::cout << "======================\n";
+    return 0;
+}
 
 int main()
 {
-    int opcion;
-    std::cout << "Calculadora V2: Potencias y divisiones enteras\n";
-    std::cout << "Incorporamos dos opciones de operaciones, sin mejoras en gestion de errores\n";
-    _getch();
-    system("cls");
+    int eleccion = 1;
 
-    opcion = 1;
-    while (opcion != 0) {
+    while (eleccion != 0) {
         menu();
-        std::cout << "Elccion: ";
-        std::cin >> opcion;
-        system("cls");
-        if (opcion == 1) {
-            suma();
+        std::cout << "";
+        std::cin >> eleccion;
+        if (eleccion == 1) {
+            calculadora();
         }
-        else if (opcion == 2) {
-            resta();
-        }
-        else if (opcion == 3) {
-            dividir();
-        }
-        else if (opcion == 4) {
-            multiplicar();
-        }
-        else if (opcion == 5) {
-            div_entera();
-        }
-        else if (opcion == 6) {
-            potencia();
-        }
-        else if (opcion == 0) {
-            std::cout << "Saliendo...";
+        else if (eleccion == 0) {
+            std::cout << "Saliendo del programa...\n";
             _getch();
-            break;
         }
         else {
-            std::cout << "Opcion introducida no valida, elija de nuevo por favor";
+            std::cout << "Opcion no admitida, introduzca una opcion valida por favor";
         }
-        _getch();
-        system("cls");
-    }
-    system("cls");
+    }  
 }
