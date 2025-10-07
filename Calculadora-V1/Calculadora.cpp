@@ -17,7 +17,7 @@ int calculadora() {
         std::cout << "Elccion: ";
         std::cin >> opcion;
         system("cls");
-        if (1 >= opcion  <=6) {
+        if (1 >= opcion && opcion <=6) {
             operaciones_basicas(opcion);
         }
         else if (opcion == 0) {

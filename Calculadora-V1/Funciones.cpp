@@ -1,6 +1,6 @@
 #include "Funciones.h"
 #include <iostream>
-
+#include <cmath>
 
 
 int operaciones_basicas(int opcion) {
@@ -39,16 +39,19 @@ int operaciones_basicas(int opcion) {
         resto = Num1 - Num2 * resultado;
     }
     else if (opcion == 6) { //Potencia 
-        for (int i = 1; i <= Num2; i++) {
-            resultado = resultado * Num1;
-        }
+        resultado = std::pow(Num1, Num2);
     }
     else if (opcion == 7) { //Núm más alto
         resultado = std::max(Num1, Num2);
         std::cout << "El numero mas grande es:" << resultado;
         return 0;
     }
-
+    else if (opcion == 8) { //Núm más bajo
+        resultado = std::min(Num1, Num2);
+        std::cout << "El numero mas bajo es:" << resultado;
+        return 0;
+    }
+    
     std::cout << "El resultado es: " << resultado << "\n" << std::endl;
     return 0;
 }
