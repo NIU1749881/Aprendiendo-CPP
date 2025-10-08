@@ -24,12 +24,11 @@ int main()
         menu();
         std::cout << "";
         std::cin >> eleccion;
+        system("cls");
         if (eleccion == 1) {
-            system("cls");
             calculadora();
         }
         else if (eleccion == 2) {
-            system("cls");
             ppt();
         }
         else if (eleccion == 0) {

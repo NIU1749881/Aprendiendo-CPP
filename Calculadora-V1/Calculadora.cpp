@@ -17,13 +17,13 @@ int calculadora() {
         std::cout << "Elccion: ";
         std::cin >> opcion;
         system("cls");
-        if (1 >= opcion && opcion <=8) {
-            operaciones_basicas(opcion);
-        }
-        else if (opcion == 0) {
-            std::cout << "Saliendo...";
-            _getch();
-            break;
+        if (opcion >= 0 && opcion <=8) {
+            if (opcion == 0) {
+                std::cout << "Saliendo...";
+            }
+            else {
+                operaciones_basicas(opcion);
+            }
         }
         else {
             std::cout << "Opcion introducida no valida, elija de nuevo por favor";
@@ -31,6 +31,5 @@ int calculadora() {
         _getch();
         system("cls");
     }
-    system("cls");
     return 0;
 }
