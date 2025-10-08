@@ -9,6 +9,8 @@ void menu() {
     std::cout << "Multiplicar: 4\n";
     std::cout << "Division entera: 5\n";
     std::cout << "Potencia: 6\n";
+    std::cout << "Numero mas alto: 7\n";
+    std::cout << "Numero mas bajo: 8\n";
     std::cout << "Salir: 0\n";
     std::cout << "======================\n";
 }
