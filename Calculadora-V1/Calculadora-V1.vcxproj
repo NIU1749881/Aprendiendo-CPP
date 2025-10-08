@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Calculadora.cpp" />
+    <ClCompile Include="PPT.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="Interfaces.cpp" />
@@ -136,6 +137,7 @@
     <ClInclude Include="Calculadora.h" />
     <ClInclude Include="Funciones.h" />
     <ClInclude Include="Interfaces.h" />
+    <ClInclude Include="PPT.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
