@@ -36,29 +36,37 @@ int ppt() {
 		if (jugada1 == jugada2) {
 			std::cout << "\nSe ha producido un empate!\n";
 		}
-		else if (jugada1 == 1 && jugada2 == 2) {
-			std::cout << "\nPiedra pierde contra papel. " << jugador2 << " gana la ronda\n";
-			puntos2++;
-		}
-		else if (jugada1 == 2 && jugada2 == 3) {
-			std::cout << "\nPapel pierde contra tijeras. " << jugador2 << " gana la ronda\n";
-			puntos2++;
-		}
-		else if (jugada1 == 3 && jugada2 == 1) {
-			std::cout << "\nTijeras pierden contra piedra. " << jugador2 << " gana la ronda\n";
-			puntos2++;
-		}
-		else if (jugada1 == 3 && jugada2 == 2) {
-			std::cout << "\nTijeras ganan contra papel. " << jugador1 << " gana la ronda\n";
-			puntos1++;
-		}
-		else if (jugada1 == 1 && jugada2 == 2) {
-			std::cout << "\nPiedra gana contra tijeras. " << jugador1 << " gana la ronda\n";
-			puntos1++;
-		}
-		else if (jugada1 == 2 && jugada2 == 1) {
-			std::cout << "\nPapel gana contra piedra. " << jugador1 << " gana la ronda\n";
-			puntos1++;
+		else {
+			if (jugada1 == 1) {
+				if (jugada2 == 2) {
+					std::cout << "\nPiedra pierde contra papel. " << jugador2 << " gana la ronda\n";
+					puntos2++;
+				}
+				else if (jugada2 == 3) {
+					std::cout << "\nPiedra gana contra tijeras. " << jugador1 << " gana la ronda\n";
+					puntos1++;
+				}
+			}
+			if (jugada1 == 2) {
+				if (jugada2 == 1) {
+					std::cout << "\nPapel gana contra piedra. " << jugador1 << " gana la ronda\n";
+					puntos1++;
+				}
+				else if (jugada2 == 3) {
+					std::cout << "\nPapel pierde contra tijeras. " << jugador2 << " gana la ronda\n";
+					puntos2++;
+				}
+			}
+			if (jugada1 == 3) {
+				if (jugada2 == 1) {
+					std::cout << "\nTijeras pierden contra piedra. " << jugador2 << " gana la ronda\n";
+					puntos2++;
+				}
+				else if (jugada2 == 2) {
+					std::cout << "\nTijeras ganan contra papel. " << jugador1 << " gana la ronda\n";
+					puntos1++;
+				}
+			}
 		}
 
 		std::cout << "Puntos " << jugador1 << ": " << puntos1 << "\n";
