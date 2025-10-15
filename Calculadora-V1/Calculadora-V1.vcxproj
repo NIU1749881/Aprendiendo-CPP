@@ -132,12 +132,14 @@
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="Interfaces.cpp" />
+    <ClCompile Include="TTC.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Calculadora.h" />
     <ClInclude Include="Funciones.h" />
     <ClInclude Include="Interfaces.h" />
     <ClInclude Include="PPT.h" />
+    <ClInclude Include="TTC.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

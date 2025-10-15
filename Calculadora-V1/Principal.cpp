@@ -6,12 +6,14 @@
 
 #include "Calculadora.h"
 #include "PPT.h"
+#include "TTC.h"
 
 void menu_principal() {
     std::cout << "Seleccione uno de los siguientes programas por favor:\n";
     std::cout << "======================\n";
     std::cout << "Calculadora: 1\n";
     std::cout << "Piedra, papel o tijeras: 2\n";
+    std::cout << "Tres en raya: 3\n";
     std::cout << "Salir: 0\n";
     std::cout << "======================\n";
 }
@@ -46,6 +48,9 @@ int main()
             break;
         case 2:
             ppt();
+            break;
+        case 3:
+            ttc();
             break;
         default:
             system("cls");
